@@ -1,0 +1,2 @@
+class WifisController < ApplicationController
+end
