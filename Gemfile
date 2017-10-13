@@ -35,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 
 #住所から緯度経度を登録できるgem
 gem 'geocoder'
+#hamlに変更
+gem 'haml-rails'
+#変換コマンド
+gem 'erb2haml'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
