@@ -1,7 +1,5 @@
 class WifisController < ApplicationController
-  
   def index
-    @tweet = "テスト"
+    @tweet = Wifi.find(1)
   end
-
 end
