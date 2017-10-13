@@ -13,6 +13,11 @@
 ActiveRecord::Schema.define(version: 20171011034747) do
 
   create_table "wifis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "facilities"
+    t.string "address"
+    t.float "longitude", limit: 24
+    t.float "latitude", limit: 24
+    t.float "distance", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
