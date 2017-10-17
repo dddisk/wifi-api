@@ -1,5 +1,5 @@
 class WifisController < ApplicationController
-  before_action :wifi_params, only: :create
+
   def index
   end
 
