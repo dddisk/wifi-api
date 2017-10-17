@@ -1,8 +1,8 @@
-<%= form_tag :search_wifis,method: :get do %>
+<%= form_tag :wifis,method: :post do %>
     <p>
-        <%= text_field_tag "q",params[:q] %>
-        <%= text_field_tag "q",params[:q] %>
-        <%= text_field_tag "q",params[:q] %>
-        <%= submit_tag "検索" %>
+    <input placeholder="県名を入力してください" type="text" name="prefecture">
+    <input placeholder="緯度を入力してください" type="text" name="latitude">
+    <input placeholder="経度を入力してください" type="text" name="longitude">
+    <input type="submit" value="SENT">
     </p>
 <% end %>
