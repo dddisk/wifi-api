@@ -6,3 +6,34 @@
     <input type="submit" value="SENT">
     </p>
 <% end %>
+
+
+
+<%= form_tag :wifis, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Near", :name => nil %>
+<% end %>
+
+
+<% if @locations.present? %>
+  <%= @locations.each do |location| %>
+    <p>
+      <%= simple_format(location.address) %>
+    </p>
+    <p>
+      <%= location.latitude %>
+    </p>
+    <p>
+      <%= location.longitude %>
+    </p>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
+

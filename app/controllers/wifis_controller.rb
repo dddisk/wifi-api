@@ -1,6 +1,11 @@
 class WifisController < ApplicationController
 
   def index
+    if params[:search].present?
+      @locations = Wifi.near(params[:search], 1,
+        :order => :distance)
+    end
+    binding.pry
   end
 
   def new
@@ -10,8 +15,7 @@ class WifisController < ApplicationController
     params = wifi_params
     @params = wifi_params.values
     @prefecture = params[:prefecture]
-    @latitude = params[:latitude]
-    @longitude = params[:longitude]
+    @address = params[:latitude].to_i + params[:longitude].to_i
   end
 
 
