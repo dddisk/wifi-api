@@ -17,15 +17,15 @@
 
 
 <% if @locations.present? %>
-  <%= @locations.each do |location| %>
+  <% @locations.each do |location| %>
     <p>
-      <%= simple_format(location.address) %>
+      <%= location.name %>
     </p>
     <p>
-      <%= location.latitude %>
+      <%= location.distance %>
     </p>
     <p>
-      <%= location.longitude %>
+
     </p>
   <% end %>
 <% end %>
