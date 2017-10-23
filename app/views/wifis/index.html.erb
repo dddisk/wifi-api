@@ -1,31 +1,25 @@
-<%= form_tag :wifis,method: :post do %>
-    <p>
-    <input placeholder="県名を入力してください" type="text" name="prefecture">
-    <input placeholder="緯度を入力してください" type="text" name="latitude">
-    <input placeholder="経度を入力してください" type="text" name="longitude">
-    <input type="submit" value="SENT">
-    </p>
-<% end %>
-
-
-
 <%= form_tag :wifis, :method => :get do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search Near", :name => nil %>
+    <%= text_field_tag :address, params[:address], placeholder: '住所を入力してください' %>
+    <%= text_field_tag :distance, params[:distance], placeholder: '距離(m)を入力してください' %>
+    <%= text_field_tag :limit, params[:limit], placeholder: '件数を入力してください' %>
+    <%= submit_tag "SENT", :name => nil %>
 <% end %>
 
 
 <% if @locations.present? %>
+    <p>
+      <%= @locations %>
+    </p>
   <% @locations.each do |location| %>
     <p>
-      <%= location.name %>
+      <%= location.address %>
     </p>
     <p>
       <%= location.distance %>
     </p>
     <p>
-
+      <%= location.limit %>
     </p>
   <% end %>
 <% end %>
