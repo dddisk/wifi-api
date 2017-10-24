@@ -43,13 +43,13 @@ class WifisController < ApplicationController
 
     #距離のデフォルト指定
       distance = (wifi_params[:distance].to_f / 1000)
-      if distance.zero?
+      if distance.zero? || distance < 0
         distance = 0.5
       end
 
       #件数のデフォルト指定
       limit = wifi_params[:limit].to_f
-      if limit.zero?
+      if limit.zero? || limit < 0
         limit = 5
       end
 
