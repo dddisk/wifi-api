@@ -1,3 +1,3 @@
 Geocoder.configure(
-  timeout: 10
+ units: :km,                 # :km for kilometers or :mi for miles
 )

@@ -16,8 +16,17 @@ class WifisController < ApplicationController
       limit = 5
     end
 
+    #@locations[0][:address]みたいなのは取れる
     @locations = Wifi.alteration(address,distance,limit)
-    binding.pry
+    @locations = @locations.map do |loca|
+      loca = {
+        name: loca.name,
+        address: loca.address,
+        distance_m: (loca.distance * 1000).round(1)
+      }
+      render json: @locations
+      binding.pry
+    end
 
 
     end

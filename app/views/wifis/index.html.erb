@@ -8,19 +8,7 @@
 
 
 <% if @locations.present? %>
-    <p>
-      <%= @locations %>
-    </p>
   <% @locations.each do |location| %>
-    <p>
-      <%= location.address %>
-    </p>
-    <p>
-      <%= location.distance %>
-    </p>
-    <p>
-      <%= location.limit %>
-    </p>
   <% end %>
 <% end %>
 

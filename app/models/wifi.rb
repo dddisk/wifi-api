@@ -5,7 +5,6 @@ class Wifi < ApplicationRecord
 
 
   def self.alteration(ad,di,li)
-    locations = near(ad, di, :order => :distance).limit(li)
+    locations = near(ad, di, :untis => :km).limit(li)
   end
-
 end
