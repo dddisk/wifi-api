@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   get 'wifis' => 'wifis#index'
-  post 'wifis' => 'wifis#create'
+  get 'searchs' => 'wifis#search'
   root "wifis#index"
 end
