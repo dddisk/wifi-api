@@ -1,24 +1,15 @@
-# README
+# 使い方
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+http://localhost:3000/にログイン
 
-Things you may want to cover:
+住所,距離(m),件数指定をフォームに入力する
 
-* Ruby version
 
-* System dependencies
+# データの種類
+name = 施設名
+address = 住所
+distance_m = 距離(m単位)
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
