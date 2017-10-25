@@ -1,4 +1,4 @@
-<%= form_tag :searchs, :method => :get do %>
+<%= form_tag :search, :method => :get do %>
   <p>
     <%= text_field_tag :address, params[:address], placeholder: '住所を入力してください' %>
     <%= text_field_tag :distance, params[:distance], placeholder: '距離(m)を入力してください' %>
@@ -6,7 +6,7 @@
     <%= submit_tag "SENT", :name => nil %>
 <% end %>
 
-<%= link_to 'search', searchs_path %>
+<%= link_to 'search', search_path %>
 
 
 

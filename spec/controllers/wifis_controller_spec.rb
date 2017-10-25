@@ -1,7 +1,8 @@
 require 'rails_helper'
-require 'spec_helper'
 
-describe 'GET#search' do
+
+RSpec.describe WifisController, type: :controller do
+
   let(:params) {{address: "成田市三里塚字御料牧場1-1", distance: -4, limit: 0}}
   it "distance request is default" do
     get :search, params: params
